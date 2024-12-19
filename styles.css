@@ -1,0 +1,84 @@
+/* Heart Theme Styles */
+
+/* Set the background color for the entire page */
+body {
+    background-color: #fce4ec; /* Soft pink background */
+    font-family: Arial, sans-serif;
+    color: #333; /* Dark text for contrast */
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for the heart container */
+.heart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+    flex-direction: column;
+}
+
+/* Create a heart shape using CSS */
+.heart {
+    width: 100px;
+    height: 100px;
+    background-color: #e91e63; /* Bright pink color */
+    position: relative;
+    transform: rotate(45deg);
+    margin-bottom: 20px;
+    animation: heartbeat 1.5s infinite alternate; /* Add heartbeat animation */
+}
+
+/* Creating the top halves of the heart */
+.heart::before,
+.heart::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #e91e63;
+    border-radius: 50%;
+}
+
+/* Position the top halves */
+.heart::before {
+    top: -50px;
+    left: 0;
+}
+
+.heart::after {
+    top: -50px;
+    right: 0;
+}
+
+/* Add a heartbeat animation */
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* Style for the heart-shaped text */
+h1 {
+    color: #d81b60; /* Darker pink color for the text */
+    font-size: 3em;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for links (if needed) */
+a {
+    color: #f06292; /* Lighter pink for links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #e91e63; /* Hover effect: bright pink */
+}
